@@ -17,7 +17,6 @@ class TaskManagerController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -31,7 +30,6 @@ class TaskManagerController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
     // MARK: - Table view data source
 
@@ -42,7 +40,6 @@ class TaskManagerController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.taskList.count
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("itemTaskCell", forIndexPath: indexPath)
@@ -51,19 +48,14 @@ class TaskManagerController: UITableViewController {
         cell.textLabel?.text = taskItem.taskDescription
         cell.detailTextLabel?.text = taskItem.local
         cell.detailTextLabel?.textColor = UIColor.grayColor()
-        
         return cell
     }
-    
-
     
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
-
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -79,7 +71,6 @@ class TaskManagerController: UITableViewController {
         }
     }
     
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -90,7 +81,6 @@ class TaskManagerController: UITableViewController {
             taskEditViewController.task = self.taskList[(tableView.indexPathForSelectedRow?.row)!]
         } 
     }
-        
     
     // MARK: Class methods
     

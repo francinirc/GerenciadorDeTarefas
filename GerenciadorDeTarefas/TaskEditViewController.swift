@@ -18,7 +18,7 @@ class TaskEditViewController: UITableViewController {
         
     
     // MARK: Properties
-    private var datePickerHidden = true
+    //private var datePickerHidden = true
     var task: Task? = nil
     
     
@@ -48,35 +48,7 @@ class TaskEditViewController: UITableViewController {
             self.update()
         }
     }
-    
-    
-//    // MARK: TableView methods
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        switch (indexPath.section, indexPath.row) {
-//        case (1, 1):
-//            toggleDatePicker()
-//        default:
-//            ()
-//        }
-//    }
-//    
-//    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-//        if datePickerHidden && indexPath.section == 1 && indexPath.row == 0 {
-//            return 0
-//        } else {
-//            return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
-//        }
-//    }
-    
-    // MARK: Class methods
-//    private func toggleDatePicker() {
-//        datePickerHidden = !datePickerHidden
-//        
-//        // Force table to update its contents
-//        tableView.beginUpdates()
-//        tableView.endUpdates()
-//    }
-    
+   
     
     private func fillFields() {
         self.descriptionTextField.text = self.task?.taskDescription
@@ -91,7 +63,6 @@ class TaskEditViewController: UITableViewController {
     }
     
     private func insert() {
-        
         if self.validateTask() {
             
             self.task = Task()

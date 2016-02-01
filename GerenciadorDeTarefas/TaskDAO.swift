@@ -36,6 +36,7 @@ class TaskDAO {
     // delete object
     static func delete(task: Task) {
         DatabaseManager.sharedInstance.managedObjectContext.deleteObject(task)
+        
         do {
             try DatabaseManager.sharedInstance.managedObjectContext.save()
             
